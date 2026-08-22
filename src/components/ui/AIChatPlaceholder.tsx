@@ -1,0 +1,1 @@
+export function AIChatPlaceholder(){return <div className="rounded-2xl border bg-teal-50 p-5"><p className="font-semibold text-teal-700">AI Business Analyst</p><p className="mt-2 text-sm text-slate-600">AI SDK integration boundary ready for the next milestone.</p></div>}
