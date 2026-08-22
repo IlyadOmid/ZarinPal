@@ -1,0 +1,1 @@
+export function InsightCard({title,children}:{title:string;children:React.ReactNode}){return <section className="rounded-2xl border bg-white p-5"><h3 className="font-semibold">{title}</h3><div className="mt-2 text-sm text-slate-600">{children}</div></section>}
