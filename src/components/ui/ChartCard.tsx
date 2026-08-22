@@ -1,0 +1,1 @@
+export function ChartCard({title}:{title:string}){return <div className="flex min-h-48 items-center justify-center rounded-2xl border border-dashed bg-white p-6 text-sm text-slate-400">{title} · chart coming soon</div>}
