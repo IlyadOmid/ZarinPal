@@ -1,0 +1,6 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+enum UserRole { OWNER ADMIN ANALYST VIEWER }
+model User { id String @id @default(cuid()) email String @unique role UserRole @default(VIEWER) merchantId String? merchant Merchant? @relation(fields: [merchantId], references: [id]) createdAt DateTime @default(now()) }
+model Merchant { id String @id @default(cuid()) merchantKey String @unique terminalKey String? categoryId String? categoryTitle String? businessType String? createdAt DateTime @default(now()) users User[] transactions TransactionRaw[] }
+model TransactionRaw { id String @id @default(cuid()) sessionKey String trySeq Int merchantKey String amount BigInt adjustedFee BigInt? sessionStatus String? tryStatus String? pspCode String? issuerBankCode String? payerCardKey String? createdAt DateTime @default(now()) verifiedAt DateTime? settledAt DateTime? merchant Merchant? @relation(fields: [merchantKey], references: [merchantKey]) @@index([merchantKey, createdAt]) @@index([sessionKey]) }
