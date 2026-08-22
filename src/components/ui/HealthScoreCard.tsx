@@ -1,0 +1,1 @@
+export function HealthScoreCard(){return <div className="rounded-2xl bg-slate-900 p-6 text-white"><p>Business Health Score</p><p className="mt-3 text-4xl">—</p><p className="mt-3 text-sm text-slate-300">Connect data to calculate your score.</p></div>}
