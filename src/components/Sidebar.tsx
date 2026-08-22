@@ -1,0 +1,2 @@
+const items=["Overview","Growth","Payments","Benchmark","AI Analyst","Reports","Settings"];
+export function Sidebar(){return <aside className="hidden w-64 border-r bg-white p-5 md:block"><h2 className="text-lg font-bold">ZarinPal</h2><p className="mb-8 text-xs text-slate-400">Growth Intelligence</p><nav className="space-y-2">{items.map((x,i)=><div key={x} className={`rounded-lg px-3 py-2 text-sm ${i===0?"bg-teal-50 text-teal-700":"text-slate-600"}`}>{x}</div>)}</nav></aside>}
